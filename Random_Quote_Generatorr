@@ -1,0 +1,51 @@
+import random
+
+print("==============================")
+print("    RANDOM QUOTE GENERATOR")
+print("==============================")
+
+name = input("Enter your name: ")
+
+while True:
+    print("\nChoose a category:")
+    print("1. Motivation")
+    print("2. Study")
+    print("3. Self-Love")
+
+    choice = input("Enter your choice (1-3): ")
+
+    if choice == "1":
+        quotes = [
+            "Believe in yourself!",
+            "Never give up on your dreams.",
+            "Small steps lead to big results."
+        ]
+    elif choice == "2":
+        quotes = [
+            "Keep learning every day.",
+            "Work hard for your dreams.",
+            "Mistakes help you learn."
+        ]
+    elif choice == "3":
+        quotes = [
+            "Be kind to yourself.",
+            "You are enough.",
+            "Believe in your own worth."
+        ]
+    else:
+        print("Invalid choice! Try again.")
+        continue
+
+    quote = random.choice(quotes)
+
+    print("\n==============================")
+    print("       YOUR DAILY QUOTE")
+    print("==============================")
+    print(name + ", " + quote)
+    print("==============================")
+
+    again = input("\nDo you want another quote? (yes/no): ")
+
+    if again.lower() != "yes":
+        print("Thank you for using our program!")
+        break
